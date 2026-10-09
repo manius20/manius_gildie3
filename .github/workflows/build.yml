@@ -1,0 +1,28 @@
+name: manius_gildie - buduj JAR
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+      - name: Zainstaluj Java 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: maven
+      - name: Zbuduj plugin
+        run: mvn --batch-mode --no-transfer-progress clean verify
+      - name: Zapisz gotowy JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: manius_gildie-JAR
+          path: target/manius_gildie-*.jar
+          if-no-files-found: error
+          retention-days: 30
