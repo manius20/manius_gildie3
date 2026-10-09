@@ -1,0 +1,71 @@
+# Każda pozycja: slot 0-26, material to identyfikator Material Bukkit.
+guild-menu:
+  title: '&8S16 SMP 2 &7| &6Gildia'
+  size: 27
+  fill-material: GRAY_STAINED_GLASS_PANE
+  buttons:
+    info:
+      slot: 10
+      command: gildia info
+      material: BOOK
+      name: '&eInformacje'
+      lore: ['&7Zobacz informacje o swojej gildii']
+    claim:
+      slot: 11
+      command: gildia claim
+      material: GRASS_BLOCK
+      name: '&aKup chunk'
+      lore: ['&7Cena zależy od liczby chunków']
+    unclaim:
+      slot: 12
+      command: gildia unclaim
+      material: BARRIER
+      name: '&cOddaj chunk'
+      lore: ['&7Odpinanie bez rozdzielania terenu']
+    map:
+      slot: 13
+      command: gildia mapa
+      material: FILLED_MAP
+      name: '&bMapa chunków'
+      lore: ['&7Podgląd terenu wokół Ciebie']
+    wars:
+      slot: 14
+      command: gildia wojny
+      material: IRON_SWORD
+      name: '&cWojny'
+      lore: ['&7Sprawdź aktywne wojny']
+    pvp:
+      slot: 15
+      command: gildia pvp
+      material: SHIELD
+      name: '&dPvP gildyjne'
+      lore: ['&7Włącz/wyłącz obrażenia sojuszników']
+    ranking:
+      slot: 9
+      command: gildia ranking
+      material: GOLD_INGOT
+      name: '&eRanking państw'
+      lore: ['&7Top 10 krajów według terenu']
+    sojusze:
+      slot: 17
+      command: gildia sojusze
+      material: WHITE_BANNER
+      name: '&bSojusze'
+      lore: ['&7Pokaż sojuszników']
+    home:
+      slot: 16
+      command: gildia dom
+      material: COMPASS
+      name: '&6Siedziba'
+      lore: ['&7Teleportuj się do domu gildii']
+currency-menu:
+  title: '&8S16 SMP 2 &7| &eWaluta'
+  size: 27
+  preview-slot: 13
+  save-slot: 22
+  save-material: EMERALD_BLOCK
+  save-name: '&aZATWIERDŹ WALUTĘ'
+  help-slot: 4
+  help-material: PAPER
+  help-name: '&eWybór przedmiotu'
+  help-lore: ['&7Podnieś item kursorem z ekwipunku.', '&7Kliknij slot 13. Nie tracisz przedmiotu.', '&7Kliknij zielony przycisk, aby zapisać.']

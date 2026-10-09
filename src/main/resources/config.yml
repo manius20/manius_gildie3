@@ -1,0 +1,97 @@
+# S16 SMP 2: ustawienia główne - zmiany przez IceHost/plugins/S16Countries/config.yml
+# Po edycji: /gildia admin reload lub restart. Edytuj tylko przy WYŁĄCZONYM serwerze plik data.yml.
+general:
+  name-pattern: '[A-Za-z0-9_]{3,16}'
+  max-members: 30
+  invite-expire-seconds: 120
+  enabled-worlds: [world]
+  allow-nether-end: false
+  broadcast-create: true
+  broadcast-disband: true
+  max-guilds: 1000
+claims:
+  max-per-guild: 100
+  auto-claim-on-create: true
+  must-touch-own-claim: true
+  # Koszt kolejnych chunków: base + (liczba obecnych chunków * per-owned-chunk)
+  base-cost: 12
+  per-owned-chunk: 2
+  unclaim-refund: 0
+  protect-block-break: true
+  protect-block-place: true
+  protect-containers: true
+  protect-interactions: true
+  protect-entities: true
+  protect-explosions: true
+  protect-pistons: true
+  protect-fluids: true
+  protect-fire: true
+  protect-hoppers: true
+  show-enter-title: true
+  map-radius: 4
+currency:
+  # Wybrany item ustawia /gildia admin waluta, zapisywany jest do currency.yml.
+  # Gdy nie ma ustawionego przedmiotu, PŁATNE akcje są zablokowane (fail-closed).
+  create-cost: 64
+  war-declare-cost: 32
+  capture-cost: 16
+  # Dla 0 jednostek płatność nie jest potrzebna.
+pvp:
+  enabled: true
+  # /gildia pvp przełącza tylko obrażenia między członkami własnej gildii
+  friendly-fire-default: false
+war:
+  enabled: true
+  preparation-seconds: 300
+  duration-seconds: 3600
+  capture-seconds: 60
+  capture-defender-radius: 24
+  capture-max-distance-from-start: 10
+  capture-requires-adjacency: true
+  allow-capital-capture: true
+  max-active-wars-per-guild: 2
+  war-declare-cooldown-seconds: 1800
+  conquest-require-online-defender: false
+  broadcast-events: true
+diplomacy:
+  enabled: true
+  max-alliances: 5
+  proposal-expire-seconds: 120
+  allow-war-between-allies: false
+home:
+  enabled: true
+  cooldown-seconds: 120
+  require-owned-chunk: true
+  teleport-delay-seconds: 3
+bluemap:
+  refresh-seconds: 30
+  show-top: 3
+  max-listed-members: 30
+  enabled: true
+  marker-set-id: s16countries
+  marker-set-label: 'Granice państw S16'
+  marker-y: 70
+  line-width: 2
+  line-alpha: 0.9
+  fill-alpha: 0.18
+  # Kolory przyznawane kolejnym państwom
+  colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#e67e22', '#1abc9c', '#ecf0f1']
+
+# Wiadomości pluginu (kolor niebieski i mała strzałka).
+chat:
+  prefix: '&9&lS16 SMP 2 &8» &r'
+
+# Ochrona przed zakładaniem gildii i claimowaniem na obszarach admina.
+# Na tych obszarach NIE blokujemy budowania ani interakcji.
+admin-regions:
+  enabled: true
+  wand-material: BLAZE_ROD
+  max-radius-chunks: 32
+  max-region-area-chunks: 4096
+  particle-interval-ticks: 10
+  particle-duration-seconds: 8
+
+stats:
+  count-kills: true  # PvP zabójstwa zdobyte przez członków gildii (bez friendly fire)
+
+# Nowe dane w oknie BlueMap

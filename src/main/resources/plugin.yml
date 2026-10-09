@@ -1,0 +1,26 @@
+name: S16Countries
+version: '2.0.0'
+main: pl.s16.countries.S16Countries
+api-version: '26.2'
+author: S16 SMP 2
+description: Państwa, gildie, claimy, podboje, PvP i waluta w przedmiotach
+softdepend: [BlueMap]
+commands:
+  gildia:
+    description: Panel gildii i wszystkie komendy państw
+    usage: /gildia pomoc
+    aliases: [g]
+permissions:
+  s16countries.use:
+    description: Dostep do funkcji gildii
+    default: true
+  s16countries.admin:
+    description: Zarzadzanie pluginem, waluta i wojny
+    default: op
+  s16countries.bypass:
+    description: Obejscie ochrony claimow
+    default: op
+
+  s16countries.region.admin:
+    description: Tworzenie i usuwanie regionów administracyjnych
+    default: op

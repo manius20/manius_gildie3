@@ -1,0 +1,21 @@
+# Id roli jest używane w danych. Możesz zmieniać nazwę i uprawnienia.
+# Nazwy uprawnień: ALL, INVITE, KICK, ROLE, CLAIM, UNCLAIM, WAR, PEACE, CAPTURE, PVP, SETHOME, DISBAND, TRANSFER, DIPLOMACY
+roles:
+  prezydent:
+    name: '&6Prezydent'
+    permissions: [ALL]
+  zastepca:
+    name: '&eZastępca'
+    permissions: [INVITE, KICK, ROLE, CLAIM, UNCLAIM, WAR, PEACE, CAPTURE, PVP, SETHOME, DIPLOMACY]
+  minister:
+    name: '&bMinister'
+    permissions: [INVITE, CLAIM, UNCLAIM, CAPTURE]
+  obywatel:
+    name: '&7Obywatel'
+    permissions: []
+settings:
+  leader-role: prezydent
+  default-role: obywatel
+  # ról lidera nie przydziela się komendą /gildia rola, tylko /gildia przekaz
+  protected-role: prezydent
+  ex-leader-role: zastepca
